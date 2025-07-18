@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "aws": "^0.0.3-2",
+    "aws-sdk": "^2.1416.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "firebase-admin": "^12.6.0",
+    "generate-otp": "^1.0.6",
+    "html": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.7.0",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.8",
+    "otp-generator": "^4.0.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pm2": "^5.3.0",
+    "promise": "^8.3.0",
+    "sdk": "^0.5.0",
+    "validator": "^13.15.15"
+  }
+}
