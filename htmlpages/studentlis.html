@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="/classstd.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</head>
+<body>
+ <div id="loading">
+        <div class="loader"></div>
+    </div>
+   <div class="content" id="content">
+  
+  <header>
+ 
+  </header>
+
+   <footer id="foot">
+    <div class="container">
+      <a href="report">Report</a>
+      <a href="contactus">ContactUs</a>
+      <a href="Help">Help</a>
+    </div>
+    <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+  </footer>
+
+  <!-- Edit Modal -->
+<div id="editModal" class="modal" style="display:none;">
+  <div class="modal-content">
+   
+    <h4>Edit Student</h4>
+     <span class="close">&times;</span>
+    <form id="editForm">
+
+      <div class="form-group floating-label" id="editRegnoGroup">
+  <input type="text" id="editRegno" placeholder=" " required />
+  <label for="editRegno">Reg No</label>
+</div>
+
+
+      <div class="form-group floating-label">
+        <input type="text" id="editFullname" placeholder=" " required />
+        <label for="editFullname">Full Name</label>
+      </div>
+
+      <div class="form-group floating-label">
+        <input type="text" id="editYear" placeholder=" " required />
+        <label for="editYear">Year</label>
+      </div>
+
+      <div class="form-group floating-label">
+        <input type="text" id="editSem" placeholder=" " required />
+        <label for="editSem">Semester</label>
+      </div>
+
+      <div class="form-group floating-label">
+        <input type="text" id="editSection" placeholder=" " required />
+        <label for="editSection">Section</label>
+      </div>
+
+      <div class="form-group floating-label">
+        <input type="text" id="editCourse" placeholder=" " required />
+        <label for="editCourse">Course</label>
+      </div>
+      <div id="editErrorMsg" style="color: red; margin-bottom: 10px;"></div>
+      <button type="button" id="sub-edit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>
+
+<div id="successPopup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <p>Student updated successfully!</p>
+  </div>
+</div>
+
+<div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+</div>
+
+    
+  
+   <script type="module" src="/classstd.js"></script>
+</body>
+</html>

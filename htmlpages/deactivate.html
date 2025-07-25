@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deactivate Student</title>
+   <link rel="stylesheet" href="/deactivate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+ <div id="loading">
+        <div class="loader"></div>
+    </div>
+ <div class="content" id="content">
+   <header class="custom-header">
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdownr">
+        
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+            <img id="profile"src="" alt="Circle Image">
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-contentr">
+               
+                <a href="profile">Profile</a>
+               
+                <a href="/deactivate" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+<div class="heds">
+  <h1>Deactivate Student</h1>
+  <div class="search-wrapper">
+    <input type="text" placeholder="search by regno/ name" id="regNo" class="form-control search-input">
+    <i class="fas fa-search search-icon"></i>
+     <ul id="studentSuggestions" class="list-group position-absolute" style="z-index:999;"></ul>
+  </div>
+</div>
+
+
+<div class="d-flex justify-content-center">
+      <div id="studentDetails" class="card p-4 shadow" style="display: none; width: 100%; max-width: 500px;">
+        <div class="text-center">
+       <img id="studentPic" src="" class="rounded-circle" style="width: 120px; height: 120px; margin-right: 15px;">
+          <h5 id="studentName"></h5>
+          <p id="studentRegno" class="text-muted"></p>
+           <div class="line">
+    <span id="studentYear" style="margin-right: 20px;"></span>
+    <span id="studentSemester"></span>
+  </div>
+  
+  <div class="line">
+    <span id="studentCourse" style="margin-right: 20px;"></span>
+    <span id="studentSection"></span>
+
+     
+  </div>
+
+  <div id="feeDues" style="margin-top: 10px;">
+
+   
+  </div>
+  
+        </div>
+    <div id="confirmDeactivateContainer" class="form-check mt-3" style="display: none;">
+  <input type="checkbox" class="form-check-input" id="confirmDeactivate">
+  <label class="form-check-label" for="confirmDeactivate">
+    I understand that the student has pending dues and still wish to deactivate.
+  </label>
+</div>
+
+    <div id="deactivateErrorMsg" class="text-danger text-center mt-2" style="display: none;"></div>
+       
+         <button id="deactivateBtn" class="btn btn-danger w-100" disabled>Deactivate</button>
+      </div>
+    </div>
+  
+<div id="successPopup" class="success-popup" style="display: none;">
+  <div class="popup-content">
+    <i class="fa-solid fa-circle-check"></i>
+    <p id="popupMessage">Deactivation successful!</p>
+  </div>
+</div>
+
+
+
+  <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+
+   <div id="overlay1">
+                <div class="overlay-content">
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                    <!-- Add your login form or content here -->
+                    <h2>Login</h2>
+                
+                    <div class="popup">
+            <form class="overl">
+                <div class="log">
+                    <input type="text" id="username" placeholder="Username/id/collegename">
+                </div>
+                <span id="usernameError" class="error"></span>
+                <div class="log">
+                    
+                        <input type="password" id="passwordl" placeholder="Password">
+                        <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+                    </div>
+                </div>
+                <span id="passwordError" class="error"></span>
+                <div class="log">
+                    <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+        </div>
+
+
+ </div>
+</div>
+<script type="module" src="/deactivate.js">
+   
+
+</script>
+
+
+
+</body>
+</html>
+
