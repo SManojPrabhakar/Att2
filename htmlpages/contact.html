@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+    <div id="conte">
+ <header>
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdown">
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+         
+            <img id="profile"src="" alt="Circle Image">
+            
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-content">
+              
+                <a href="#">Profile</a>
+
+                <a href="/contactus" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+ <div class="background-image">
+  <h1>Have questions or need help? Contact us today!</h1>
+    </div>
+   <div class="containerfeedback">
+    <form>
+	   <div class="form-group">
+                <select id="issues">
+                  <option selected disabled>How may we help you?</option>
+  <option value="Issue with college registration">Issue with college registration</option>
+  <option value="Unable to log in to my account">Unable to log in to my account</option>
+  <option value="Error while taking or viewing attendance">Error while taking or viewing attendance</option>
+  <option value="Student or lecturer not showing up in list">Student or lecturer not showing up in list</option>
+  <option value="App not loading or crashing">App not loading or crashing</option>
+  <option value="Profile or college details update request">Profile or college details update request</option>
+  <option value="Attendance data is incorrect or missing">Attendance data is incorrect or missing</option>
+  <option value="Problem with push notifications">Problem with push notifications</option>
+  <option value="Payment or subscription query">Payment or subscription query</option>
+  <option value="Other">Other</option>
+                </select><br>
+               
+            </div>
+            <span id="issuesError" class="error"></span>
+        <div class="form-group">
+            <input type="text" id="fullName"  placeholder=" ">
+            <label for="fullName">FullName</label>
+            <span id="fullNameError" class="error"></span>
+        </div>
+        
+
+        <div class="form-group">
+            <input type="text" id="email"  placeholder=" ">
+            <label for="email">Email</label>
+            <span id="emailError" class="error"></span>
+        </div>
+   
+
+	  <div class="form-group">
+            <input type="type" id="mobilenumber"  placeholder=" ">
+            <label for="Mobilenumber">Mobile number</label>
+            <span id="mobilenumberError" class="error"></span>
+        </div>
+   
+
+	 <div class="form-group">
+        <input type="type" id="message"  placeholder=" ">
+    
+                <label  for="message" placeholder="">message</label>
+                <span id="messageError" class="error"></span>   
+            </div>
+           
+<div class='form-group'>
+                <button type="button" id="submitBtn" class="btn-primary">Submit Feedback</button>
+            </div>
+    </form>
+      </div>
+
+    <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+       <div id="successPopup" class="success-popup" style="display: none;">
+  <div class="popup-content">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="popupMessage">Success!</span>
+  </div>
+</div>
+
+     <div id="progressOverlay" style="display: none;">
+  <div class="spinner"></div>
+</div> 
+      <footer id="foot">
+        <div class="container">
+            <a href="report">Report</a>
+            <a href="contactus">ContactUs</a>
+            <a href="Help">Help</a>
+           
+        </div>
+        <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+    </footer>
+      <div id="overlay1">
+        <div class="overlay-content">
+            <i class="fa-solid fa-xmark" id="xmark"></i>
+            <!-- Add your login form or content here -->
+            <h2>Login</h2>
+        
+            <div class="popup">
+    <form class="overl">
+        <div class="log">
+            <input type="text" id="username" placeholder="Username/id/collegename">
+        </div>
+        <span id="usernameError" class="error"></span>
+        <div class="log">
+            
+                <input type="password" id="password" placeholder="Password">
+                <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+            </div>
+        </div>
+        <span id="passwordError" class="error"></span>
+        <div class="log">
+            <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+        </div>
+    </form>
+    
+</div>
+</div>
+
+
+
+</div>
+ 
+<script type="module" src="contact.js"></script>   
+</body>
+</html>

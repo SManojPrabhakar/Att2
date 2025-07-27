@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="help.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+     
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          What is Attendance2day?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+           
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How does it work?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          What are the major challanges of Attendance2day?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How does the ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How can I register college in Attenndance2day?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+
+      <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

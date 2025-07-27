@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Attendance2day</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="madstyle.css">
+
+   </head>
+
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+    <div id="conte">
+    <div class="background-image" id="back">
+  
+        <nav>
+            <button  id="signup">Signup</button>
+           
+            <button id="login">Login  <i class="fa-solid fa-user" id="age"></i></button>
+           
+            <img src="" alt="" id="Image">
+           
+            <div class="dropdown">
+                <button class="dropbtn" id="userame"><i class="fas fa-caret-down" id="down"></i></button>
+                <div class="dropdown-content">
+                   <a href="/profile" id="profile">Profile</a>
+                    <a href="/" id="logout">Logout</a>
+                </div>
+            </div>
+           
+       <button onclick="window.location.href='academics'" id="academics">Academics</button>
+         <button onclick="window.location.href='campus'" id="campus">Campus Insights</button>
+        <button onclick="window.location.href='colleges'" id="colleges">Colleges</button>
+           <button onclick="window.location.href='deactivate'" id="deactivate">Deactivate-Student</button>
+                <button onclick="window.location.href='studentstuff'" id="studentstuff">Class</button>
+         <button onclick="window.location.href='studentreg'" id="studentreg">Student-Registration</button>
+             <button onclick="window.location.href='feeportal'" id="feeportal">Fee-Portal</button>
+            <button id="register">Register</button>
+            <button onclick="window.location.href='Aboutus'" id="About">About Us</button>
+            <button onclick="window.location.href='contactus'" id="contactus">Contact Us</button>
+        </nav>
+        <header>
+            <h1>Attendance2day<br>
+                <p>Every Day Counts: Attend to Achieve!</p>
+                
+            </h1>
+            
+        </header>
+        
+    </div>
+
+    <div class="content" id="content">
+        <h2>Recently registered Colleges</h2>
+        <div class="card-container" id="card"></div>
+        <h2 class="Aca" >Academic Life: Lecturer and Student</h2>
+        <p align="justify">
+            In a typical academic setting, lecturers and students follow distinct yet intertwined daily routines.Lecturers
+            commence their day by preparing for classes, conducting lectures, and engaging in research activities.They met
+            iculously track student attendance, using various methods such as sign-in sheets or electronic systems.Simult
+            aneously,students navigate through a structured routine, attending lectures, participating in discussions,and
+            dedicating time to self-study. Regular attendance is crucial for students to grasp course content effectively.
+            Periodic exams serve as checkpoints, assessing students' understanding and knowledge retention. Lecturers dili
+            gently grade these exams, providing valuable feedback to aid in students' academic progress. Additionally, 
+            students and lecturers alike contend with administrative aspects, such as managing fees and ensuring timely 
+            payments. This symbiotic relationship between lecturers and students forms the foundation of a dynamic educational
+            ecosystem, fostering learning and growth.
+        </p>
+        
+      
+           
+           
+            
+        </div>
+      <!-- Session Expired Popup -->
+<div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+          
+            
+        
+         
+    
+   
+    <footer id="foot">
+        <div class="container">
+            <a href="report">Report</a>
+            <a href="contactus">ContactUs</a>
+            <a href="Help">Help</a>
+           
+        </div>
+        <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+    </footer>
+
+    <div id="overlay">
+        <div class="overlay-content">
+            <i class="fa-solid fa-xmark" id="xmark"></i>
+            <!-- Add your login form or content here -->
+            <h2>Login</h2>
+        
+            <div class="popup">
+    <form class="overl">
+        <div class="log">
+            <input type="text" id="username" placeholder="Username/id/collegename">
+        </div>
+        <span id="usernameError" class="error-message"></span>
+        <div class="log">
+            
+                <input type="password" id="password"  placeholder="Password">
+                <i class="fa-regular fa-eye-slash" id="eyeSlash3"></i>
+            </div>
+        </div>
+        <span id="passwordError" class="error-message"></span>
+        <div class="log">
+            <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+        </div>
+    </form>
+    
+</div>
+</div>
+
+<div id="overlay2">
+    <div class="overlay-content2">
+        <i class="fa-solid fa-xmark" id="xmark2"></i>
+        <!-- Add your login form or content here -->
+        <h3>Signup</h3>
+    
+        <div class="popup">
+
+  <form>
+    <div class="input-field">
+                
+        <select  id="Administration">
+    <option selected disabled>Select role</option>
+            <option value="Founder">Founder</option>
+            <option value="Admin">Admin</option>
+            <option value="Lecturer">Lecturer</option>
+       
+            
+        </select>
+        <span id="AdministrationError" class="error-message"></span>
+    </div>
+    <div class="input-field" id="collegeselect">
+                
+        <select  id="collagesele">
+    <option selected disabled>Select College</option>
+            
+            
+        </select>
+        <span id="collageseleError" class="error-message"></span>
+    </div>
+
+   <!--  <div class="input-field">
+        <input type="text" id="collegecode" placeholder="" >
+        <label for="collegecode" id="collegecodes">College-code</label>
+        <span id="collegecodeError" class="error-message"></span>
+        
+    </div>-->
+
+    
+    <div class="input-field">
+        <input type="text" id="Id" placeholder="" >
+        <label for="Id" id="Ids">reg.no/Id</label>
+        <span id="IdError" class="error-message"></span>
+        
+    </div> 
+
+     <div class="input-field">
+        <input type="text" id="unqcode" placeholder="" >
+        <label for="unqcode" id="unqcodes">Uniquecode</label>
+        <span id="unqcodeError" class="error-message"></span>
+        
+    </div>
+    
+<div class="input-field">
+        <input type="text" id="fullname" placeholder="" >
+        <label for="fullname" id="fullnames">Fullname</label>
+        <span id="FullnameError" class="error-message"></span>
+        
+    </div> 
+
+    <div class="input-field">
+        <input type="text" id="Email" placeholder="" style="padding-right:65px ;">
+        <label for="Email">Email</label>
+        <button type="button"  class="btn btn-primary" id="verifyButton" disabled>Verify</button>
+        <span id="EmailError" class="error-message"></span>
+    </div>
+    <div class="otp">
+        <div class="input-group">
+            <input type="text" id="digit1" name="digit1" maxlength="1"  placeholder="">
+        </div>
+        <div class="input-group">
+            <input type="text" id="digit2" name="digit2" maxlength="1"  placeholder="">
+        </div>
+        <div class="input-group">
+            <input type="text" id="digit3" name="digit3" maxlength="1"  placeholder="">
+        </div>
+        <div class="input-group">
+            <input type="text" id="digit4" name="digit4" maxlength="1"  placeholder="" >
+
+        </div>
+       
+        <div class="input-group">
+            <input type="text" id="digit5" name="digit5" maxlength="1"  placeholder="" >
+
+        </div>
+           <div class="input-group">
+            <input type="text" id="digit6" name="digit6" maxlength="1"  placeholder="" >
+
+        </div>
+        <div id="otpResult"></div>
+      
+       
+    </div>
+  
+   
+    <div class="input-field">
+        <input type="password" id="pasword" placeholder="" >
+        <label for="pasword">password</label>
+        <i class="fa-regular fa-eye-slash" id="eyeSlash2"></i>
+        <span id="paswordError" class="error-message"></span>
+    </div> 
+   
+    <div class="input-field">
+        <input type="password" id="confirmpassword" placeholder="" >
+        <label for="confirmpassword">confirm password</label>
+        <i class="fa-regular fa-eye-slash" id="eyeSash"></i>
+        <span id="confirmpasswordError" class="error-message"></span>
+    </div> 
+    
+     
+    <p><input type="checkbox" id="agree" name="agree"> I agree to Attendance2day's Terms of Service,Privacy Policy and Content Policies</p>
+    <span id="checkboxError" class="error-message"></span>
+    </div>
+    
+        
+    
+    
+    
+    <div class="input-field">
+        <button type="button" id="subsignup"  class="btn btn-primary" disabled>Signup</button>
+    </div>
+  </form>
+
+</div>
+</div>
+
+
+<div id="overlay3">
+    <div class="overlay-content3">
+      
+        <!-- Add your login form or content here -->
+       
+    
+        <div class="popup">
+      
+            
+
+</div>
+</div>
+</div>
+    </div>
+    <script type='module' src="madcontroller.js"></script>
+    
+    <script type='module' src="model.js"></script>
+
+   
+</body>
+
+</html>
