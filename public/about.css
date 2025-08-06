@@ -1,0 +1,381 @@
+
+header {
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
+
+header img {
+  margin-top: 5px;
+  border-radius: 50px;
+  margin-left: 200px;
+  height: 45px;
+  width: 40px;
+}
+.background-image {
+
+  background-image: url('iansh.jpg');
+  background-size:cover ;
+   height: 70vh;
+  
+ }
+    header h2 {
+      color:black;
+	 margin-top:10px;
+     font-family: Arial, sans-serif;
+	}
+ header p {
+      color:black;
+	 margin-top:20px;
+       margin-left:10px;
+     font-family: Arial, sans-serif;
+	text-align :center;
+     
+    }
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #f0f0f0;
+      z-index: 9999;
+    }
+    #loading .loader {
+      width: 0;
+      height: 100%;
+      background-color: green;
+      transition: width 0.5s;
+    }
+    #conte{
+      display: none;
+    }
+    .content{
+
+      margin-right:200px;
+      margin-left:200px;
+      
+      }
+     
+     
+      .content  img{
+      height:300px;
+      width:250px;}
+       .content h2{
+        margin-top: 10px;
+       }  
+       .card {
+                   width: 280px; /* Adjust the width as needed */
+              height: 200px;
+            
+               border: 1px solid #fff;
+               border-radius: 25px;
+              margin-bottom: 10px;
+              margin-right: 10px;
+              margin-left: 50px;
+        border-radius:80%;
+              } 
+        .card img{
+         width: 280px; 
+             height: 200px;
+        border-radius:80%;
+            }
+      
+       .card p {
+              font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 16px;
+            padding-left: 50px;
+           }
+      .founder {
+        display: flex;
+        padding-bottom: 50px;
+      }
+      footer{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        height: 200px;
+        color: white;
+        }
+       #conte{
+        display: none;
+       }
+        footer img{
+        width:200px;
+        
+        }
+        footer p{
+          color: white;
+        text-align:center;
+        margin-top: 30px;
+        }
+        .containerlinks{
+          
+            margin-left:50px;
+        display: flex;}
+        
+        .container{
+        padding:10px;
+      
+        display: flex;
+   justify-content: center;}
+
+        .container a{
+            color: white;
+           padding-top:70px ;
+            padding-left: 50px;
+            font-size: 18px;
+        }
+        .container img{
+            padding-top:50px ;
+            padding-left: 50px;
+        }
+        .container p{
+            color: white;
+          text-align:left;
+          }
+
+         .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 80%;
+}
+
+.popup-box h2 {
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background-color: #0056b3;
+}
+      @media (max-width:396px) {
+        .background-image{
+          height: 20vh;
+        }
+        header h2 {
+          font-size: 24px;
+          }
+          header img {
+            margin-top: 5px;
+            border-radius: 50px;
+            margin-left: 70px;
+            height: 45px;
+            width: 40px;
+           
+
+          }
+          .content{
+
+            margin-right:10px;
+            margin-left:10px;
+            
+            }
+            .content h2{
+              font-size: 22px;
+            }
+            .content p{
+              font-size: small;
+            }
+            .card {
+              width: 100px; /* Adjust the width as needed */
+         height: 180px;
+      
+      
+         margin-left: 10px;
+   border-radius:80%;
+         } 
+   .card img{
+    width: 100px; 
+        height: 180px;
+   border-radius:80%;
+       }
+ 
+  .card p {
+         font-family: "Lucida Console", "Courier New", monospace;
+       font-size: 16px;
+       padding-left: 10px;
+      } 
+     
+     }
+      @media (min-width: 397px)and (max-width:480px) {
+        .background-image{
+          height: 20vh;
+        }
+        header h2 {
+          font-size: 24px;
+          }
+          header img {
+            margin-top: 5px;
+            border-radius: 50px;
+            margin-left: 70px;
+            height: 45px;
+            width: 40px;
+           
+
+          }
+          .content{
+
+            margin-right:10px;
+            margin-left:10px;
+            
+            }
+            .content h2{
+              font-size: 22px;
+            }
+            .content p{
+              font-size: small;
+            }
+            .founder{
+              margin-left: 20px;
+            }
+            .card {
+              width: 100px; /* Adjust the width as needed */
+         height: 180px;
+      
+      
+         margin-left: 10px;
+   border-radius:80%;
+         } 
+   .card img{
+    width: 100px; 
+        height: 180px;
+   border-radius:80%;
+       }
+ 
+  .card p {
+         font-family: "Lucida Console", "Courier New", monospace;
+       font-size: 16px;
+       padding-left: 10px;
+      } 
+    }
+     
+    /* Media Query for low resolution  Tablets, Ipads */
+    @media (min-width: 481px) and (max-width: 767px) {
+      .background-image{
+        height: 20vh;
+      }
+      header h2 {
+        font-size: 24px;
+        }
+        header img {
+          margin-top: 5px;
+          border-radius: 50px;
+          margin-left: 70px;
+          height: 45px;
+          width: 40px;
+         
+
+        }
+        .content{
+
+          margin-right:10px;
+          margin-left:10px;
+          
+          }
+          .content h2{
+            font-size: 22px;
+          }
+          .content p{
+            font-size: small;
+          }
+          .founder{
+            margin-left: 40px;
+          }
+          .card {
+            width: 100px; /* Adjust the width as needed */
+       height: 180px;
+margin-left: 10px;
+ border-radius:80%;
+       } 
+ .card img{
+  width: 100px; 
+      height: 180px;
+ border-radius:80%;
+     }
+
+.card p {
+       font-family: "Lucida Console", "Courier New", monospace;
+     font-size: 16px;
+     padding-left: 10px;
+    } 
+    }
+     
+    /* Media Query for Tablets Ipads portrait mode */
+    @media (min-width: 768px) and (max-width: 1024px){
+      .background-image{
+        height: 30vh;
+      }
+      header h2 {
+        font-size: 24px;
+        }
+        header img {
+          margin-top: 5px;
+          border-radius: 50px;
+          margin-left: 70px;
+          height: 45px;
+          width: 40px;
+         
+
+        }
+        .content{
+
+          margin-right:30px;
+          margin-left:30px;
+          
+          }
+          .content h2{
+            font-size: 22px;
+          }
+          .content p{
+            font-size: small;
+          }
+          .founder{
+            margin-left: 10px;
+          } 
+          .card {
+            width: 180px; /* Adjust the width as needed */
+       height: 240px;
+     
+      
+       } 
+ .card img{
+  width: 180px; 
+      height: 240px;
+ 
+     }
+       
+     .card p {
+     
+    font-size: 18px;
+    padding-left: 40px;
+   }
+    }
+     

@@ -1,0 +1,1292 @@
+
+
+      
+.background-image  {
+   
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("chathome.png");
+   background-size:cover ;
+height:70vh;
+
+   background-repeat: no-repeat;
+ 
+
+}
+#campus{
+  display: none;
+}
+#deactivate{
+  display: none;
+}
+#colleges{
+  display: none;
+}
+#studentstuff{
+  display: none;
+}
+#feeportal{
+  display: none;
+}
+#academics{
+  display: none;
+}
+#studentreg{
+  display: none;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 80%;
+}
+
+.popup-box h2 {
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background-color: #0056b3;
+}
+
+
+#drop-area {
+        
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 200px;
+  height: 150px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+.img-preview {
+ padding-left:5px;
+  padding-right:5px;
+  max-width: 50%;
+  max-height: 50%;
+  margin: 10px 0;
+}
+#file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+      header {
+          color:White;
+          text-align: center;
+        margin-top: 80px;
+      }
+   header h1{
+    font-size: 66px;
+   }
+      header p {
+          font-size: 16px;
+          margin: 1px 0;
+      }
+
+      nav {
+          color: white;
+          padding: 0.8em ;
+          text-align: right;
+      }
+     
+       
+      nav img{
+        height: 50px;
+        width: 50px;
+        border: none;
+        border-radius: 40px;
+      }
+      nav button {
+        
+        padding: 0px 5px; /* Adjust padding as needed */
+       /* Add margin to create spacing between buttons */
+       margin-right: 50px;
+        background-color: transparent;
+        color: white;
+        border: transparent;
+        outline: none;
+        border-radius: 5px;
+     
+        text-decoration: none;
+        font-size: 16px;
+      }
+      
+      nav button:focus {
+        outline: none;
+    }
+      
+    
+      .content{
+        
+        padding-top: 10px;
+       margin-left: 200px;
+       margin-right: 200px;
+      }
+     .content h2{
+        font-size: 1.5em;
+     }
+     .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+  
+    
+    .card {
+      width: 180px;
+      height: 120px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+  
+      display: flex;
+      justify-content: center;   /* Center horizontally */
+      align-items: center;       /* Center vertically */
+      text-align: center;        /* Center multi-line text */
+      padding: 10px;             /* Add padding for breathing room */
+      box-sizing: border-box;    /* Ensure padding doesn't overflow */
+      word-wrap: break-word;     /* Break long words */
+      background-color: transparent;
+
+
+  }
+  
+  .card p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;           /* Slightly smaller for better fit */
+      padding-left: 0;
+      margin: 0;
+      line-height: 1.2;          /* Improve line spacing */
+  }
+  
+  
+  /* .card img{
+       width: 50px; 
+       height: 50px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }*/
+    footer{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        height: 200px;
+        color: white;
+        }
+       #conte{
+        display: none;
+       }
+        footer img{
+        width:200px;
+        
+        }
+        footer p{
+          color: white;
+      text-align: center;
+        margin-top: 30px;
+        }
+       
+        
+        .container{
+        padding:10px;
+      
+        display: flex;
+   justify-content: center;}
+
+        .container a{
+            color: white;
+           padding-top:70px ;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        .container img{
+            padding-top:50px ;
+           
+        }
+        .container p{
+            color: white;
+          text-align:left;
+          }
+        .input-field {
+           margin-bottom: 10px;
+  position: relative;
+}
+
+.input-field input[type="password"] {
+  padding-right: 40px; /* Give space for the eye icon */
+}
+
+#eyeSlash2,
+#eyeSash {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  color: #333;
+}
+          
+         .input-field input,
+          select {
+            width: 95%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+          }
+          .otp {
+            display: none;
+           
+         max-width: 100px;
+            margin: 10px;
+        }
+        
+        .otp input {
+            height: 42px;
+            width: 42px;
+            margin-left: 5px;
+            padding: 8px;
+            box-sizing: border-box;
+            border-color: #555;
+            border-radius: 20%;
+          
+        }
+        
+          label {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            font-size: 16px;
+            color: rgb(44, 41, 41);
+            pointer-events: none;
+            transition: all 0.3s ease;
+            transform-origin: 0% 0%;
+            background-color: white;
+          }
+          
+          input:focus + label,
+          input:not(:placeholder-shown) + label,
+          select:focus + label,
+          select:not(:placeholder-shown) + label {
+            transform: translateY(-16px) scale(0.8);
+            color: blue;
+          }
+        
+
+
+    
+ 
+      #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    
+    .overlay-content {
+        background-color: #fff;
+       
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+   
+    .overl input{
+  border-radius: 2px;
+  margin-bottom: 6px;
+    padding: 8px; /* Increased vertical padding */
+    border: 1.5px solid #ccc;
+  border-radius: 4px;
+  width: 230px;
+}
+      
+    
+   #overlay2 {
+    display: none; /* Required for centering */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+ .two{
+ 
+  flex-wrap: wrap;
+ }
+ .two1{
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .two1 .input-field{
+  width: 24%;
+ }
+ .two .input-field{
+  width: 100%;
+ }
+    .overlay-content2 {
+    background-color: #fff;
+    width: 600px;
+    max-height: 90vh; /* Limit height to trigger scrolling */
+    overflow-y: auto; /* Enable vertical scroll */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    scroll-behavior: smooth;
+}
+    .overlay-content2 h3{
+        margin-bottom: 20px;
+    }
+  #overlay3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.overlay-content3 {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px 25px;
+  width: 90%;
+  max-width: 320px; /* ⬅️ Reduced from 450px */
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  animation: popupFadeIn 0.3s ease-in-out;
+}
+
+.overlay-content3 img {
+  max-width: 100px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.overlay-content3 p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0;
+  color: #333;
+}
+
+.overlay-content3 button {
+  background-color: #0b7d61;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.overlay-content3 button:hover {
+  background-color: #095e4c;
+  transform: scale(1.03);
+}
+
+/* Animation */
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+    .error-message{
+        color: red;
+        margin-left:2px ;
+       
+    }
+    #usernameError{
+      display: none;
+    }
+    #passwordError{
+      display: none;
+    }
+    #verifyButton {
+        position: absolute;
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 11px 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        
+    }
+
+    
+    
+    #verifyButton:hover {
+        background-color: #0056b3;
+    }
+    .fa-xmark {
+        float: right;
+    }
+    
+    
+
+    .overl input{
+        width: 230px;
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        
+    }
+    
+    .dropbtn {
+        padding: 0px 5px; /* Adjust padding as needed */
+       /* Add margin to create spacing between buttons */
+       margin-right: 50px;
+   
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        display: none;
+     text-align: left;
+        position: absolute;
+        margin-top: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        max-width: 140px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+       padding-bottom: 5px;
+       padding-left: 5px;
+         width: 130px;
+         font-size: 16px;
+       
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+       
+        background-color:lightgray;
+    }
+
+    
+
+   
+
+    .fa-caret-down{
+       
+        padding-left: 10px;
+    }
+    #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #f0f0f0;
+        z-index: 9999;
+    }
+    #loading .loader {
+        width: 0;
+        height: 100%;
+        background-color: green;
+        transition: width 0.5s;
+    }
+
+ 
+    /* === Responsive Styles for All Screens === */
+
+@media (max-width: 600px) {
+  .background-image {
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+  }
+
+  #eyeSlash2,
+#eyeSash {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  color: #333;
+}
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav button, .dropbtn {
+    margin: 5px;
+    font-size: 14px;
+    margin-right: 10px !important;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .content {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container a {
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  .otp input {
+    width: 35px;
+    height: 35px;
+  }
+
+  .overlay-content2,
+  .overlay-content3 {
+    width: 90% !important;
+    padding: 15px;
+  }
+
+  .two1 .input-field {
+    width: 100%;
+  }
+
+  #verifyButton {
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  footer p {
+    margin-top: 10px;
+  }
+
+  #conte {
+    padding: 10px;
+  }
+
+  .input-field input,
+  .input-field select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .dropbtn {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+  }
+
+    .background-image {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  nav button,
+  .dropbtn {
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  .content {
+    margin: 20px;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .otp input {
+    width: 40px;
+    height: 40px;
+  }
+
+  .two1 .input-field {
+    width: 48%;
+  }
+
+  .overlay-content2 {
+    width: 85%;
+  }
+
+  .overlay-content3 {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .content {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+    .background-image {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .card {
+    width: 180px;
+  }
+
+  .two1 .input-field {
+    width: 24%;
+  }
+
+  .otp input {
+    width: 42px;
+    height: 42px;
+  }
+
+  .overlay-content2 {
+    width: 600px;
+  }
+
+  .overlay-content3 {
+    max-width: 320px;
+  }
+}
+
+    
+  /* Media Query for Mobile Devices */
+  /*
+  @media (max-width:396px) {
+    .background-image{
+     height:30vh;
+    }
+    header {
+     
+   margin-top: 30px;
+ }
+    header h1{
+     font-size: 28px;
+    }
+    
+    nav button {
+        margin-right: 5px;
+     font-size: 12px;
+   }
+    .content{
+     margin-left: 10px;
+     margin-right: 10px;
+    }
+    #userame{
+        font-size: 12px;
+    }
+    
+    .content h2{
+        font-size: 16px;
+       }
+    .card-container{
+    margin-left: 15px;
+    flex-wrap: wrap;
+    }
+    .card{
+     width: 150px;
+     height:150px ;
+    }
+   /* .card img{
+     width: 160px;
+     height: 100px;
+    }
+    .container a{
+     padding-left: 20px;
+     font-size: 14px;
+  }
+
+  nav img{
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+  }
+  .overlay-content h2{
+font-size: 22px;
+  }
+  .overlay-content button{
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+  }
+  #overlay2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.overlay-content2 {
+    background-color: #fff;
+    margin-top: 20px;
+   width: 350px;
+  justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.overlay-content2 h3{
+    margin-bottom: 20px;
+}
+#verifyButton {
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 11px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+.input-field input,
+      select {
+        width: 92%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      #overlay3 {
+          
+        position: fixed;
+        top: 200px;
+        left: 70px;
+        width: 60%;
+        height: 30%;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+ 
+    .overlay-content3 {
+        align-items: center;
+        background-color: #fff;
+       
+       width: 100%;
+       height: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .overlay-content3 img{
+        margin-left: 80px;
+        height: 60px;
+        width: 60px;
+    }
+    .overlay-content3 button{
+     
+      margin-left: 80px;
+    }
+   
+ }
+  @media (min-width: 397px)and (max-width:480px) {
+   .background-image{
+    height:30vh;
+   }
+   header {
+    
+  margin-top: 50px;
+}
+   header h1{
+    font-size: 34px;
+   }
+   
+   nav button {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+   .content{
+    margin-left: 10px;
+    margin-right: 10px;
+   }
+   .card-container{
+    margin-left: 10px;
+   flex-wrap: wrap;
+   }
+   .card{
+    
+    width: 150px;
+    height:150px ;
+   }
+  /* .card img{
+    width: 180px;
+    height: 100px;
+   }
+   .container a{
+    padding-left: 10px;
+    font-size: 16px;
+ }
+ #overlay2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.overlay-content2 {
+    background-color: #fff;
+    margin-top: 20px;
+   width: 400px;
+  justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.overlay-content2 h3{
+    margin-bottom: 30px;
+}
+#verifyButton {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 11px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+.input-field input,
+      select {
+        width: 92%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      #overlay3 {
+    
+        position: fixed;
+        top: 340px;
+        left: 100px;
+        width: 50%;
+        height: 20%;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+ 
+    .overlay-content3 {
+        align-items: center;
+        background-color: #fff;
+       
+       width: 100%;
+       height: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .overlay-content3 img{
+        margin-left: 60px;
+        height: 60px;
+        width: 60px;
+    }
+    .overlay-content3 button{
+     
+      margin-left: 70px;
+    }
+   
+}
+ 
+/* Media Query for low resolution  Tablets, Ipads 
+@media (min-width: 481px) and (max-width: 767px) {
+    .background-image{
+        height:30vh;
+       }
+       header {
+        
+      margin-top: 50px;
+    }
+       header h1{
+        font-size: 34px;
+       }
+       
+       nav button {
+        margin-right: 10px;
+        font-size: 12px;
+      }
+       .content{
+        margin-left: 10px;
+        margin-right: 10px;
+       }
+      
+       .card-container{
+       margin-left: 15px;
+       flex-wrap: wrap;
+       }
+       .card{
+        width: 210px;
+        height:180px ;
+       }
+      /* .card img{
+        width: 210px;
+        height: 120px;
+       }
+       .container a{
+        padding-left: 20px;
+        font-size: 16px;
+     }
+     #overlay2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+ 
+    .overlay-content2 {
+        background-color: #fff;
+        margin-top: 20px;
+       width: 400px;
+      justify-content: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .overlay-content2 h3{
+        margin-bottom: 30px;
+    }
+    #verifyButton {
+        position: absolute;
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 11px 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        
+    }
+    .input-field input,
+          select {
+            width: 92%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+          }
+          #overlay3 {
+             
+              position: fixed;
+              top: 250px;
+              left: 150px;
+              width: 45%;
+              height: 25%;
+              border-radius: 5px;
+              background-color: rgba(0, 0, 0, 0.7);
+              justify-content: center;
+              align-items: center;
+              z-index: 1;
+          }
+       
+          .overlay-content3 {
+              align-items: center;
+              background-color: #fff;
+             
+             width: 100%;
+             height: 100%;
+              padding: 10px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          }
+          .overlay-content3 img{
+              margin-left: 60px;
+              height: 60px;
+              width: 60px;
+          }
+          .overlay-content3 button{
+           
+            margin-left: 70px;
+          }
+         
+}
+ 
+/* Media Query for Tablets Ipads portrait mode 
+@media (min-width: 768px) and (max-width: 1024px){
+    .background-image{
+        height:30vh;
+       }
+       header {
+        
+      margin-top: 50px;
+    }
+       header h1{
+        font-size: 34px;
+       }
+       
+       nav button {
+     
+        font-size: 16px;
+      }
+       .content{
+        margin-left: 10px;
+        margin-right: 10px;
+       }
+       .card-container{
+        margin-left: 15px;
+       flex-wrap: wrap;
+       }
+       .card{
+        margin-left: 15px;
+        width: 150px;
+        height:120px ;
+       }
+       /*.card img{
+        width: 320px;
+        height: 180px;
+       }
+       .container a{
+        padding-left: 20px;
+        font-size: 16px;
+     }
+     #overlay2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+ 
+    .overlay-content2 {
+        background-color: #fff;
+        margin-top: 20px;
+       width: 600px;
+      justify-content: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .overlay-content2 h3{
+        margin-bottom: 40px;
+    }
+    #verifyButton {
+        position: absolute;
+        right: 46px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 11px 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        
+    }
+    .input-field input,
+          select {
+            width: 92%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+          }
+          #overlay3 {
+             
+              position: fixed;
+              top: 450px;
+              left: 280px;
+              width: 30%;
+              height: 18%;
+              border-radius: 5px;
+              background-color: rgba(0, 0, 0, 0.7);
+              justify-content: center;
+              align-items: center;
+              z-index: 1;
+          }
+       
+          .overlay-content3 {
+              align-items: center;
+              background-color: #fff;
+             
+             width: 100%;
+             height: 100%;
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          }
+          .overlay-content3 img{
+              margin-left: 60px;
+              height: 60px;
+              width: 60px;
+          }
+          .overlay-content3 button{
+           
+            margin-left: 70px;
+          }
+}
+ */
+/* Media Query for Laptops and Desktops */
+/*@media (min-width: 1025px) and (max-width: 1280px){
+    .background-image{
+        height: 70vh;
+         }
+}
+ 
+/* Media Query for Large screens */
+/*@media (min-width: 1281px) {
+    .background-image{
+        height: 100vh;
+         }
+}

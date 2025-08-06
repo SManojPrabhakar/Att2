@@ -1,0 +1,408 @@
+
+    .custom-header {
+  max-width: 1000px;
+  margin: 0 auto 8px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+
+.content{
+  display: none;
+}
+
+  #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #f0f0f0;
+        z-index: 9999;
+    }
+    #loading .loader {
+        width: 0;
+        height: 100%;
+        background-color: green;
+        transition: width 0.5s;
+    }
+
+.custom-button {
+  background-color: transparent;
+
+  color: #000;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+header img {
+  margin-top: 5px;
+  border-radius: 60px;
+
+  height: 50px;
+  width: 50px;
+}
+
+header h2 {
+  color: black;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+#profile{
+  display: none;
+  padding-top: 5px;
+}
+#userame{
+  display: none;
+  padding-top: 10px;
+}
+#signup{
+  padding-top: 15px;
+  font-size: 18px;
+}
+#login{
+  padding-top: 15px;
+  font-size: 18px;
+}
+header button{
+  background-color: transparent;
+  border: transparent;
+}
+header button:focus {
+  outline: none;
+}
+.dropdownr {
+  display: inline-block;
+  position: relative;
+  
+}
+
+.fa-caret-down{
+       
+  padding-left: 10px;
+}
+.dropbtn {
+  padding: 0px 5px; 
+ margin-right: 50px;
+ background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdown-contentr {
+  display: none;
+text-align: left;
+  position: absolute;
+  margin-top: 20px;
+  background-color: black;
+  border-radius: 5px;
+  max-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contentr a {
+  color: white;
+ padding-bottom: 5px;
+ padding-left: 5px;
+   width: 130px;
+   font-size: 16px;
+ 
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-contentr a:hover {
+ 
+  background-color:lightgray;
+}
+
+
+.custom-button:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+
+#overlay1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.overlay-content {
+  background-color: #fff;
+ 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-content .log {
+  margin-top: 12px;
+  position: relative;
+  max-width: 900px;
+}
+    .overl input{
+  border-radius: 2px;
+  
+    padding: 8px; /* Increased vertical padding */
+    border: 1.5px solid #ccc;
+  border-radius: 4px;
+  width: 230px;
+}
+
+.fa-xmark {
+  float: right;
+}
+ .fa-eye-slash {
+       
+      transform: translateX(-150%);
+      
+  }
+
+  .fa-eye {
+       
+    transform: translateX(-150%);
+    
+}
+  
+
+ .heds {
+  background-color: #0066cc;
+  color: white;
+  border-radius: 0;
+  text-align: center;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column; /* stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between h1 and search bar */
+}
+
+    .heds h1 {
+      margin: 0;
+  
+      font-size: 2.4rem;
+      letter-spacing: 0.05em;
+      user-select: none;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    }
+
+    .search-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 20px auto 0;
+}
+
+.search-input {
+  width: 100%;
+  padding-right: 35px; /* space for icon */
+  padding-left: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+
+
+    #studentSuggestions {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+
+
+footer{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        height: 275px;
+        color: white;
+        }
+      
+        footer img{
+        width:200px;
+        
+        }
+        footer p{
+          color: white;
+      text-align: center;
+        margin-top: 30px;
+        }
+       
+        
+        .containerr{
+        padding:10px;
+      
+        display: flex;
+   justify-content: center;}
+
+        .containerr a{
+            color: white;
+           padding-top:70px ;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        .containerr img{
+            padding-top:50px ;
+           
+        }
+        .containerr p{
+            color: white;
+          text-align:left;
+          }
+
+ #studentDetails {
+      margin-top: 20px;
+    }
+
+    .radio-group label {
+      margin-right: 20px;
+    }
+
+    .line {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* spacing between items */
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  animation: fadeInOut 3s ease-in-out;
+  text-align: center;
+}
+
+.success-popup .popup-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.success-popup i {
+  font-size: 24px;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  10% { opacity: 1; transform: translate(-50%, -50%); }
+  90% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 80%;
+}
+
+.popup-box h2 {
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .custom-header {
+    flex-direction: row;
+    padding: 8px 8px;
+  }
+
+ .custom-header h2 {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .dropdownr button {
+    font-size: 12px;
+  }
+
+  #profile {
+    width: 32px;
+    height: 32px;
+  }
+  .heds h1 {
+    font-size: 22px;
+  }
+
+  .dropdownr {
+    flex-direction: row; /* or column if you want stacked layout */
+    align-items: center;
+    gap: 6px;
+  }
+
+  #userame{
+  
+  padding-top: 12px;
+}
+
+
+}

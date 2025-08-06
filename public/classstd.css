@@ -1,0 +1,352 @@
+ 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fc;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    #editRegnoGroup {
+  display: none;
+}
+  
+    header {
+      background-color: #0066cc;
+  height: 200px;
+  color: white;
+  border-radius: 0;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center; 
+    }
+    header h1 {
+      margin: 0;
+  
+      font-size: 2.4rem;
+      letter-spacing: 0.05em;
+      user-select: none;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    }
+
+  
+
+    footer{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        height: 275px;
+        color: white;
+        }
+      
+        footer img{
+        width:200px;
+        
+        }
+        footer p{
+          color: white;
+      text-align: center;
+        margin-top: 30px;
+        }
+       
+        
+        .container{
+        padding:10px;
+      
+        display: flex;
+   justify-content: center;}
+
+        .container a{
+            color: white;
+           padding-top:70px ;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        .container img{
+            padding-top:50px ;
+           
+        }
+        .container p{
+            color: white;
+          text-align:left;
+          }
+
+
+            #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #f0f0f0;
+        z-index: 9999;
+    }
+    #loading .loader {
+        width: 0;
+        height: 100%;
+        background-color: green;
+        transition: width 0.5s;
+    }
+/* Container centered inside #content */
+.student-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+ 
+  border-radius: 12px;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 2 cards per row */
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Card styling */
+.student-card {
+  position: relative;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 20px 12px 12px; /* leave space on right for icon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* vertically center card content */
+  justify-content: space-between; /* push icon to right */
+}
+
+/* Layout inside card */
+.student-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.student-details p {
+  margin: 2px 0;
+}
+
+.student-details h5 {
+  margin: 4px 0 6px;
+}
+
+.student-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.student-row p {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 6px;
+  flex: 1 1 45%;
+}
+
+.student-info {
+  flex: 1; /* take remaining space */
+}
+
+.edit-icon {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 42px;
+  align-self: center; /* vertical center */
+  transition: color 0.3s;
+}
+
+.edit-icon:hover {
+  color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal h4{
+    padding-bottom: 12px;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Style for the close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+ 
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 12px 12px 12px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.floating-label label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: white;
+  padding: 0 4px;
+  color: #999;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 8px;
+  font-size: 12px;
+  color: #333;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 80%;
+}
+
+.popup-box h2 {
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background-color: #0056b3;
+}
+
+.content{
+  display: none;
+}
+
+
+@media (max-width: 600px) {
+  .student-list {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
+  .student-card {
+    max-width: 100%;       /* Limit card width */
+    margin: 8px auto;     /* Center cards */
+    padding: 10px 14px;   /* Reduce padding */
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .student-info {
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .student-card h3, 
+  .student-card p {
+    margin: 4px 0;
+    font-size: 13px;
+  }
+
+  .edit-icon {
+    font-size: 16px;
+    top: 6px;
+    right: 6px;
+  }
+}
