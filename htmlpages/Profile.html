@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Page</title>
+   <link rel="stylesheet" href="/profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="loading">
+        <div class="loader"></div>
+    </div>
+  <div class="conte" id="conten">
+     <header class="custom-header">
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdownr">
+        
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+            <img id="profile"src="" alt="Circle Image">
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-contentr">
+               
+                <a href="profile">Profile</a>
+               
+                <a href="/profile" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+    <div class="heds">
+    <h1>Welcome back..</h1>
+  </div>
+ 
+   <div class="container" >
+    
+    <div class="profile-header centered">
+      <div class="profile-image" aria-label="User profile image">
+        <img src="" alt="Profile Picture" id="profilePic" />
+      </div>
+      <div class="profile-info">
+        <h1 id="fullname"></h1>
+        <div class="regno" id="regno"></div>
+     
+      </div>
+    </div>
+
+    <section class="cards">
+      
+       <article class="card" id="personalDetails" aria-label="Personal details">
+
+
+    <div class="card-header">
+      <h4>👤 Personal Details</h4>
+    </div>
+    <div class="card-content" id="personalDetailsContent">
+      <ul class="details-list" id="detailsList">
+       
+      </ul>
+    </div>
+  </article>
+
+       <article class="card" id="passwordSecurity" aria-label="Password and security">
+    <div class="card-header">
+      <h4>🔒 Password & Security</h4>
+    </div>
+    <div class="card-content" id="passwordSecurityContent">
+      <form>
+        <div class="form-group">
+          
+          <input type="password" id="prevPassword" name="prevPassword" autocomplete="current-password" placeholder="Enter current password" required />
+             <span id="prevPasswordError" class="error"></span>
+        </div>
+        <div class="form-group">
+       
+          <input type="password" id="currPassword" name="currPassword" autocomplete="new-password" placeholder="Enter new password" required />
+           <span id="currPasswordError" class="error"></span>
+        </div>
+        <div class="form-group">
+      
+          <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" placeholder="Re-enter new password" required />
+              <span id="confirmPasswordError" class="error"></span>
+              
+        </div>
+       <div>
+          <span id="updateMessage" class="success"></span>
+       </div>
+        <button type="submit" class="password-update-btn">Update Password</button>
+      </form>
+    </div>
+  </article>
+    </section>
+  </div>
+
+  <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+ <footer id="foot">
+    <div class="containerf">
+      <a href="report">Report</a>
+      <a href="contactus">ContactUs</a>
+      <a href="Help">Help</a>
+    </div>
+    <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+  </footer>
+
+  <div id="overlay1">
+                <div class="overlay-content">
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                    <!-- Add your login form or content here -->
+                    <h2>Login</h2>
+                
+                    <div class="popup">
+            <form class="overl">
+                <div class="log">
+                    <input type="text" id="username" placeholder="Username/id/collegename">
+                       <span id="usernameError" class="error"></span>
+                      </div>
+            
+                <div class="log">
+                    
+                        <input type="password" id="password" placeholder="Password">
+                        <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+                         <span id="passwordError" class="error"></span>
+                    </div>
+
+                </div>
+               
+                <div class="log">
+                    <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+        </div>
+
+    </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type='module' src="/prologin.js"></script>
+</body>
+</html>
+
+     

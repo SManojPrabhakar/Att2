@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fee Payment Page with Student Search</title>
+   <link rel="stylesheet" href="feeportal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+ <div id="loading">
+        <div class="loader"></div>
+    </div>
+ <div class="content" id="content">
+   <header class="custom-header">
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdownr">
+        
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+            <img id="profile"src="" alt="Circle Image">
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-contentr">
+               
+                <a href="profile">Profile</a>
+               
+                <a href="/feeportal" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+<div class="heds">
+  <h1>Fee Payment Portal</h1>
+  <div class="search-wrapper">
+    <input type="text" placeholder="search by regno/ name" id="regNo" class="form-control search-input">
+    <i class="fas fa-search search-icon"></i>
+     <ul id="studentSuggestions" class="list-group position-absolute" style="z-index:999;"></ul>
+  </div>
+</div>
+<div class="fee-cards-container" id="feeCardsContainer">
+  <!-- Cards will be inserted here dynamically -->
+</div>
+
+<div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+
+   <div id="overlay1">
+                <div class="overlay-content">
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                    <!-- Add your login form or content here -->
+                    <h2>Login</h2>
+                
+                    <div class="popup">
+            <form class="overl">
+                <div class="log">
+                    <input type="text" id="username" placeholder="Username/id/collegename">
+                </div>
+                <span id="usernameError" class="error"></span>
+                <div class="log">
+                    
+                        <input type="password" id="passwordl" placeholder="Password">
+                        <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+                    </div>
+                </div>
+                <span id="passwordError" class="error"></span>
+                <div class="log">
+                    <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+        </div>
+<div id="successPopup" class="success-popup" style="display: none;">
+  <div class="popup-content">
+    <i class="fa-solid fa-circle-check"></i>
+    <p>Payment successful!</p>
+  </div>
+</div>
+
+
+ </div>
+
+<script type="module" src="feeportal.js"></script>
+  <script type="module" src="feeportalsub.js"> </script>
+
+</script>
+
+
+
+</body>
+</html>
+

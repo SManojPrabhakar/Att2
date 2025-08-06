@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="/studentreg.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ <div id="loading">
+        <div class="loader"></div>
+    </div>
+   <div class="content" id="content">
+   <header class="custom-header">
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdownr">
+        
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+            <img id="profile"src="" alt="Circle Image">
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-contentr">
+               
+                <a href="profile">Profile</a>
+               
+                <a href="/academics" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+  <div class="heds">
+    <h1>Student Registration</h1>
+  </div>
+ 
+
+  <form class="form" id="registrationForm" autocomplete="off" novalidate>
+    <div class="form-group" id="regno-group">
+      <input type="text" name="regno" id="regno" placeholder=" " required />
+      <label for="regno">Regno (Register No.)</label>
+      <span class="error-message" id="regno-error" aria-live="polite"></span>
+    </div>
+
+    <div class="form-group" id="fullname-group">
+      <input type="text" name="fullname" id="fullname" placeholder=" " required />
+      <label for="fullname">Full Name</label>
+      <span class="error-message" id="fullname-error" aria-live="polite"></span>
+    </div>
+
+    <div class="form-group" id="course-group">
+      <select name="course" id="course" required value="">
+        <option value="" disabled selected>Select Course</option>
+      
+      </select>
+    
+      <span class="error-message" id="course-error" aria-live="polite"></span>
+    </div>
+
+    <div class="form-group" id="year-group">
+      <select name="year" id="year" required value="">
+        <option value="" disabled selected>Select Year</option>
+        <option value="I">I</option>
+        <option value="II">II</option>
+        <option value="III">III</option>
+        <option value="IV">IV</option>
+        <option value="V">V</option>
+       
+      </select>
+      <span class="error-message" id="year-error" aria-live="polite"></span>
+    </div>
+
+<div class="form-group" id="section-group">
+  <select name="section" id="section" required>
+    <option value="" disabled selected>Select Section</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="AB">AB</option>
+    <option value="CD">CD</option>
+  </select>
+  <label for="section">Section</label>
+  <span class="error-message" id="section-error" aria-live="polite"></span>
+</div>
+
+
+    <div class="form-group" id="sem-group">
+      <select name="sem" id="sem" required >
+        <option value="" disabled selected>Select Semester</option>
+        <option value="I">I</option>
+        <option value="II">II</option>
+        <option value="Annual">Annual</option>
+      </select>
+       <label for="sem">Semester</label>
+      <span class="error-message" id="sem-error" aria-live="polite"></span>
+    </div>
+
+   <div class="form-group" id="gender-group">
+  <select name="gender" id="gender" required>
+    <option value="" disabled selected>Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+  <label for="gender">Gender</label>
+  <span class="error-message" id="gender-error" aria-live="polite"></span>
+</div>
+
+     <div class="form-group" id="completionyears-group">
+  <select name="completionyears" id="completionyears" required>
+    <option value="" disabled selected>Select Course Duration</option>
+      <option value="I year">I year</option>
+        <option value="II year">II year</option>
+        <option value="III year">III year</option>
+        <option value="IV year">IV year</option>
+        <option value="V year">V year</option>
+  </select>
+  <label for="completionyears">Course Duration</label>
+  <span class="error-message" id="completionyears-error" aria-live="polite"></span>
+</div>
+
+    <div class="form-group" id="Regulation-group">
+      <input type="text" name="Regulation" id="Regulation" placeholder=" " required />
+      <label for="Regulation">Syllabus regulation</label>
+      <span class="error-message" id="Regulation-error" aria-live="polite"></span>
+    </div>
+
+
+<div class="form-group" id="phone-group">
+      <input type="text"  name="Phone" id="Phone-number" placeholder=" " required />
+      <label for="Phone-number">Phone-number</label>
+      <span class="error-message" id="Phone-error" aria-live="polite"></span>
+    </div>
+
+    <div class="form-group" id="joiningdate-group">
+      <input type="date" name="joiningdate" id="joiningdate" placeholder=" " required />
+      <label for="joiningdate">Joining Date</label>
+      <span class="error-message" id="joiningdate-error" aria-live="polite"></span>
+    </div>
+
+    
+
+    <div class="form-group" id="password-group">
+      <input type="text" name="password" id="password" placeholder=" " required />
+      <label for="password">Password</label>
+      <span class="error-message" id="password-error" aria-live="polite"></span>
+    </div>
+
+    <div class="form-group" id="totalfee-group">
+      <input type="number" min="0" step="0.01" name="totalfee" id="totalfee" placeholder=" " required />
+      <label for="totalfee">Total College Fee(optional)</label>
+      <span class="error-message" id="totalfee-error" aria-live="polite"></span>
+    </div>
+
+     
+    <div class="disclaimer" role="note" aria-live="polite">
+      * Please provide the overall college fee only, without combining the individual fees (e.g., Bus fee, Hostel fee). The breakdown of fees should be maintained separately, but only the total college fee needs to be presented in this context.
+    </div>
+     <div class="form-group" id="backend-group">
+   <span class="error-message" id="back-error" aria-live="polite"></span>
+   </div>
+   <button type="button" id="subreg" class="reg">Register</button>
+  </form>
+
+
+  <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+   <footer id="foot">
+    <div class="container">
+      <a href="report">Report</a>
+      <a href="contactus">ContactUs</a>
+      <a href="Help">Help</a>
+    </div>
+    <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+  </footer>
+
+    <div id="overlay1">
+                <div class="overlay-content">
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                    <!-- Add your login form or content here -->
+                    <h2>Login</h2>
+                
+                    <div class="popup">
+            <form class="overl">
+                <div class="log">
+                    <input type="text" id="username" placeholder="Username/id/collegename">
+                </div>
+                <span id="usernameError" class="error"></span>
+                <div class="log">
+                    
+                        <input type="password" id="passwordl" placeholder="Password">
+                        <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+                    </div>
+                </div>
+                <span id="passwordError" class="error"></span>
+                <div class="log">
+                    <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+        </div>
+
+        <div id="successPopup" class="success-popup" style="display: none;">
+  <div class="popup-content">
+    <i class="fa-solid fa-circle-check"></i>
+    <p id="popupMessage">Student Registration successful!</p>
+  </div>
+</div>
+
+  </div>
+
+
+
+    
+  
+   <script type="module" src="/studentreg.js"></script>
+   <script type="module" src="/streglogin.js"></script>
+</body>
+</html>
+
+
+

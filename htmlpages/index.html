@@ -1,0 +1,339 @@
+
+<html lang="en">
+
+<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</head>
+<div id="ui-blocker-overlay"></div>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+  <div id="conte">
+    <header class="custom-header">
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdownr">
+        
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+            <img id="profile"src="" alt="Circle Image">
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-contentr">
+               
+                <a href="/profile">Profile</a>
+               
+                <a href="/registration" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-header">
+      <h2>Registration</h2>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                   
+                </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step step-1 active">
+
+                <h2>College Details</h2>
+                <form >
+
+			        <div class="input-field">
+                
+                <select  id="state">
+                      <option selected disabled>Select a state</option>
+                    <option value="AndhraPradesh">Andhra Pradesh</option>
+                    <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="HimachalPradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="MadhyaPradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="TamilNadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="UttarPradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="WestBengal">West Bengal</option>
+                </select><br>
+                <span id="collageStateError" class="error-message"></span>
+            </div>
+			        <div class="input-field">
+                
+                <select  id="collageType">
+			<option selected disabled>Select type</option>
+                    <option value="Engineering">Engineering </option>
+                    <option value="Medical">Medical </option>
+                    <option value="Arts & Science">Arts & Science</option>
+                    <option value="Law">Law</option>
+                     <option value="Inter">Inter</option>
+                    <option value="Management">Management</option>
+                    <option value="Polytechnic ">Polytechnic</option>
+                    <option value="Agricultural">Agricultural</option>
+                    <option value="Hotel Management">Hotel Management</option>
+                    <option value="Fashion & Design">Fashion & Design</option>
+                    <option value="Fine Arts">Fine Arts</option>
+                    <option value="Aviation ">Aviation </option>
+                    <option value="Teacher Training">Teacher Training</option>
+                </select><br>
+                <span id="collageTypeError" class="error-message"></span>
+            </div>
+            
+            <div class="input-field">
+                <input type="text" id="Code" placeholder="" >
+                <label for="College Code" class="floating-label">College-Code</label>
+               
+            </div> 
+            <span id="CodeError" class="error-message"></span>
+
+            <div class="input-field">
+                <input type="text" id="collageName" placeholder="" >
+                <label for="collageName" class="floating-label">Name</label>
+               
+            </div> 
+            <span id="collageNameError" class="error-message"></span>
+
+<div class="input-field">
+                <input type="text" id="collageAddress" placeholder="" >
+                <label id="collageAddress" class="floating-label">Address</label>
+                
+            </div>
+            <span id="collageAddressError" class="error-message"></span> 
+
+<h2>Email & Contact number of college</h2>
+
+            <div class="input-field">
+		        <input type="Email" id="Email"  placeholder="" >
+                <label for="Email" class="floating-label">Email</label>
+                
+             </div>
+          
+             <button type="button" id="verification" class="btn btn-primary" onclick="showOTP();" disabled>verify</button>
+         
+                
+                <div class="otp">
+                    <div class="input-group">
+                        <input type="text" id="digit1" name="digit1" maxlength="1" oninput="moveToNextField(this, 'digit2' )" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="digit2" name="digit2" maxlength="1" oninput="moveToNextField(this, 'digit3')" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="digit3" name="digit3" maxlength="1" oninput="moveToNextField(this, 'digit4')" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="digit4" name="digit4" maxlength="1" oninput="moveToNextField(this, 'digit5')" placeholder="" >
+
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="digit5" name="digit5" maxlength="1" oninput="moveToNextField(this, 'digit6')" placeholder="" >
+
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="digit6" name="digit6" maxlength="1" oninput="moveToNextField(this, 'digit7')" placeholder="" >
+
+                    </div>
+                    <div id="otpResult"></div>
+                  
+                   
+                </div>
+              
+                <span id="collageEmailError" class="error-message"></span> 
+               
+               <div class="input-field">
+                <input type="text" id="collageLandline" placeholder="" >
+                <label id="collageLandline"class="floating-label">Number</label>
+              </div>
+            <span id="collageLandlineError" class="error-message"></span>
+             <div class="step-btns">
+                        <button type="button" id="nxt" class="btn btn-primary btn-next" onclick="nextStep(1)" disabled>Next</button>
+                    </div>
+                </form>
+            </div>
+        
+            <!-- Step 2 -->
+            <div class="step step-2">
+                <h2> Administration Information</h2>
+                <form>
+		
+
+            <div class="input-field">
+        <input type="text" id="Principal" placeholder="">
+		<label for="Principal"class="floating-label">Principal-name</label>
+               </div>
+            <span id="PrincipalError" class="error-message"></span>
+
+            <div class="input-field">
+                <input type="text" id="mail" placeholder="">
+                <label for="mail"class="floating-label">College-Email or Principal-Email</label>
+                       </div>
+                    <span id="mailError" class="error-message"></span>
+
+           
+                      <form >
+                        <h5 id="reg">Registration Certificate or Affiliation Certificate</h5>
+                        <div class="form-group">
+                            <div id="drop-area" class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                              
+                                <div id="node">
+                                    <p>Drag and drop images or click here</p>
+                                    <input type="file" id="file-input"   onchange="handleFiles(this.files)">
+                                </div>
+                            </div>
+                        </div>
+                        <span id="fileError" class="error-message"></span>
+
+                         <!-- <div class="payment">
+  <h3>Payment Options</h3>
+
+    <label>
+      <input type="radio" name="payment" value="1_year">
+      1 Year – ₹1000
+    </label><br>
+
+    <label>
+      <input type="radio" name="payment" value="1_6_years">
+      1.6 Years – ₹1300
+    </label><br>
+
+    <label>
+      <input type="radio" name="payment" value="3_years">
+      3 Years – ₹2400 
+    </label>
+                     
+
+</div>
+                           <div class="features">
+      <h4>Included Features:</h4>
+      <ul>
+        <li>Student & Lecturer Attendance Tracking</li>
+          <li>College newsfeed</li>
+        <li>Timetable Management</li>
+        <li>Fee Payments</li>
+        <li>Assignment Upload</li>
+        <li>Paid Promotion for Educational Purposes</li>
+        <li>Access to Admin Dashboard</li>
+        
+      </ul>
+      <p><strong>Upcoming Features:</strong> We're constantly improving. Expect new features and updates soon!</p>
+    </div>
+-->
+
+   
+  
+
+            <div class="step-btns">
+                        <button type="button" id="previous"class="btn btn-secondary btn-prev" onclick="prevStep(2)">Previous</button>
+                        <button type="button" id='submitBtn'class="btn btn-success">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+      
+            <div id="overlay1">
+                <div class="overlay-content">
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                    <!-- Add your login form or content here -->
+                    <h2>Login</h2>
+                
+                    <div class="popup">
+            <form class="overl">
+                <div class="log">
+                    <input type="text" id="username" placeholder="Username/id/collegename">
+                </div>
+                <span id="usernameError" class="error"></span>
+                <div class="log">
+                    
+                        <input type="password" id="password" placeholder="Password">
+                        <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+                    </div>
+                </div>
+                <span id="passwordError" class="error"></span>
+                <div class="log">
+                    <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+        </div>        
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="popup-container" id="popupContainer">
+  <p id="popupContent"></p>
+
+  <div class="popup-buttons">
+    <button id="closePopupBtn" class="home-btn">Go to Home</button>
+    <button id="cancelPopupBtn" class="cancel-btn">Cancel</button>
+  </div>
+</div>
+
+  
+            </div>
+
+            
+    <footer id="foot">
+      <div class="containerf">
+        <a href="report">Report</a>
+        <a href="contactus">ContactUs</a>
+        <a href="Help">Help</a>
+      </div>
+      <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+    </footer>
+    
+        </div>
+    <div id="loadingSpinner" style="display:none;">
+  <div class="spinner"></div>
+</div>
+
+        <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+ <script  src="script.js"></script>
+ <script type="module" src="controller.js"></script>
+
+ <script type="module" src="model.js"></script>
+ 
+</body>
+
+</html> 

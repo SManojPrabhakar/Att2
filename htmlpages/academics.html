@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Dashboard</title>
+  <link rel="stylesheet" href="academics.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ <div id="loading">
+        <div class="loader"></div>
+    </div>
+
+     
+
+
+
+
+
+  <div class="dashboard" id="dashboard">
+ <header class="custom-header">
+        <h2>Attendance2day</h2>
+       
+        <div class="dropdownr">
+        
+            <button id="login">Login  <i class="fa-solid fa-user" id="userimage"></i></button>
+            <img id="profile"src="" alt="Circle Image">
+            <button class="dropbtn" id="userame"> <i class="fas fa-caret-down" id="down"></i> </button>
+            <div class="dropdown-contentr">
+               
+                <a href="/profile">Profile</a>
+               
+                <a href="/academics" id="logout">Logout</a>
+                <!-- Add more options as needed -->
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-header">
+      <h2>Academic Dashboard</h2>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-item" data-type="classes">
+        <div class="accordion-header">
+          <i class="fas fa-book"></i>
+          <span>Classes</span>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <div class="accordion-content" id="classes-content"></div>
+        
+      </div>
+
+       
+
+      <div class="accordion-item"  data-type="attendancesheets">
+        <div class="accordion-header">
+          <i class="fas fa-clipboard-check"></i>
+          <span>Attendance Sheets</span>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <div class="accordion-content" id="sheets-content"></div>
+      </div>
+
+      <div class="accordion-item" data-type="subjects">
+        <div class="accordion-header">
+          <i class="fas fa-book"></i>
+          <span>Subjects</span>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <div class="accordion-content" id="subjects-content"></div>
+      </div>
+
+      <div class="accordion-item" data-type="timetables">
+        <div class="accordion-header">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Timetables</span>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <div class="accordion-content" id="timetables-content"></div>
+      </div>
+
+      <div class="accordion-item" data-type="assignments">
+        <div class="accordion-header">
+          <i class="fas fa-tasks"></i>
+          <span>Assigned Subjects</span>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <div class="accordion-content" id="assignments-content"></div>
+      </div>
+    </div>
+
+    <div id="session-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Session Expired</h2>
+      <p>Your session has expired. Please re-login to continue.</p>
+      <button href="/" id="ton">Re-login</button>
+    </div>
+  </div>
+  
+     <!-- Footer -->
+  <footer id="foot">
+    <div class="container">
+      <a href="report">Report</a>
+      <a href="contactus">ContactUs</a>
+      <a href="Help">Help</a>
+    </div>
+    <p>&copy; 2024 Attendance2day. All rights reserved.</p>
+  </footer>
+
+
+<div id="popupForm" class="modal">
+  <div class="modal-content">
+    <h2 class="modal-title">Create Class</h2>
+    <span id="closeFormBtn" class="close">&times;</span>
+
+    <form id="classForm" novalidate>
+      
+      <div class="form-group floating-label">
+        <input type="text" id="className" placeholder=" " required />
+        <label for="className">Class Name</label>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group floating-label">
+        <input type="text" id="Regulation" placeholder=" " required />
+        <label for="Regulation">Syllabus regulation</label>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option value="Class-Incharge">Class-Incharge</option>
+          <option value="Mentor">Mentor</option>
+        </select>
+        <small class="error"></small>
+      </div>
+ <div class="form-group">
+        <select id="year" required>
+          <option value="">Select Year</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">Iv</option>
+        </select>
+        <small class="error"></small>
+      </div>
+      
+      <div class="form-group">
+        <select id="course" required>
+          <option value="">Select Course</option>
+       
+        </select>
+        <small class="error"></small>
+      </div>
+
+     
+
+      <div class="form-group">
+        <select id="section" required>
+          <option value="">Select Section</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+           <option value="C">C</option>
+          <option value="D">D</option>
+           <option value="Ab">Ab</option>
+          <option value="Ac">Ac</option>
+        </select>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <select id="semester" required>
+          <option value="">Select Semester</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="Annual">Annual</option>
+         
+        </select>
+        <small class="error"></small>
+      </div>
+
+      <button type="button" id="classsub" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+<div id="popupFormad" class="modalad">
+  <div class="modal-contentad">
+    <h2 class="modal-title">Create Attendancesheet</h2>
+    <span id="closeFormBtnad" class="close">&times;</span>
+
+    <form id="classForm" novalidate>
+      
+      <div class="form-group floating-label">
+        <input type="text" id="classNamead" placeholder=" " required />
+        <label for="classNamead">Class Name</label>
+        <small class="error"></small>
+      </div>
+
+        <div class="form-group floating-label">
+        <input type="text" id="subjectNamead" placeholder=" " required />
+        <label for="subjectNamead">Subject name</label>
+        <small class="error"></small>
+      </div>
+
+ <div class="form-group">
+        <select id="yearad" required>
+          <option value="">Select Year</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">Iv</option>
+        </select>
+        <small class="error"></small>
+      </div>
+      
+      <div class="form-group">
+        <select id="coursead" required>
+          <option value="">Select Course</option>
+       
+        </select>
+        <small class="error"></small>
+      </div>
+
+     
+
+      <div class="form-group">
+        <select id="sectionad" required>
+          <option value="">Select Section</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+           <option value="C">C</option>
+          <option value="D">D</option>
+           <option value="Ab">Ab</option>
+          <option value="Ac">Ac</option>
+        </select>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <select id="semesterad" required>
+          <option value="">Select Semester</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="Annual">Annual</option>
+         
+        </select>
+        <small class="error"></small>
+      </div>
+
+      <button type="button" id="asssub" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div id="subjectModal" class="subject-modal" role="dialog" aria-modal="true" aria-labelledby="subjectModalTitle">
+  <div class="subject-modal-content">
+    <div class="subject-modal-header">
+      <h2 id="subjectModalTitle">Add Subjects</h2>
+      <button class="subject-close-btn" id="closeSubjectModal" aria-label="Close">&times;</button>
+    </div>
+
+    <form id="subjectForm">
+      <select id="classSelect" required>
+        <option value="" disabled selected>-- Select class --</option>
+        <!-- JS will populate class options -->
+      </select>
+
+      <div id="subjectInputsContainer">
+        <!-- Wrap initial inputs inside .subject-group -->
+        <div class="subject-group">
+          <div class="subject-input-row">
+            <input type="text" name="code" placeholder="Subject Code" required />
+            <input type="text" name="name" placeholder="Subject Name" required />
+          </div>
+          <select class="lecturername" required>
+            <option value="" disabled selected>-- Select Lecturer --</option>
+            <!-- JS will populate lecturers -->
+          </select>
+        </div>
+      </div>
+
+      <div class="subject-btn-group">
+        <button type="button" class="add-subject-btn" id="addSubjectRowBtn">+ Add Another Subject</button>
+        <button type="button" class="add-subject-btn" id="removeSubjectRowBtn">− Remove Last Subject</button>
+      </div>
+
+      <button type="submit" id="submitSubjectsBtn" class="submit-subjects-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+<div class="popup-overlay" id="popupOverlay"  role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+  <div class="popup-contents">
+    <button class="close-popup-btn" id="closePopupBtn" aria-label="Close Timetable Form">&times;</button>
+    <h2 id="popupTitle" style="margin-top:0; color:#0066cc;">Create Timetable</h2>
+
+    <form id="timetableForm">
+
+         <select id="classSelector" name="classSelect" required>
+        <option value="" disabled selected>-- Select class --</option>
+      </select>
+      <select id="daySelector" name="daySelector" required>
+        <option value="" disabled selected>-- Select Day --</option>
+      </select>
+
+      <div id="dayFormContainer" style="display:none;">
+
+        <div>
+          <h2 class="section-title">Classes</h2>
+          <div id="classesContainer" class="entries"></div>
+          <button type="button" id="addClassBtn" class="addbutton">Add Class</button>
+        </div>
+
+        <div>
+          <h2 class="section-title" id="break">Breaks</h2>
+          <div id="breaksContainer" class="entries"></div>
+          <button type="button" id="addBreakBtn" class="addbutton">Add Break</button>
+        </div>
+      </div>
+
+      <button type="submit" id="timesub" class="submit-btn">Submit Timetable</button>
+    </form>
+
+  </div>
+</div>
+  
+
+<div id="popupFormass" class="modalass">
+  <div class="modal-contentass">
+    <h2 class="modal-title">Upload Assignment</h2>
+    <span id="closeFormBtnass" class="close">&times;</span>
+
+    <form id="classForm" novalidate>
+   
+     <!-- <div class="form-group floating-label">
+  <select id="assSelect" required>
+    <option value="" disabled selected>Select class</option>
+    JS will populate class options 
+  </select>
+  <small class="error" style="color: red;"></small>
+</div>-->
+
+
+      <div class="form-group floating-label">
+       <select id="assSelect" required>
+    <option value="" disabled selected >Select subject</option>
+  </select>
+        <small class="error"></small>
+      </div>
+
+ <div class="form-group floating-label">
+        <input type="text" id="dueDateass" placeholder=" " required />
+        <label for="dueDateass">Due date</label>
+        <small class="error"></small>
+      </div>
+     <div class="form-group floating-label">
+       <input type="file" id="pdfFile" name="pdfFile" accept="application/pdf" placeholder="upload pfd only " required />
+        <small class="error" style="color: red;"></small> 
+     </div>
+
+     
+
+      <button type="button" id="asub" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+
+  <div id="overlay1">
+                <div class="overlay-content">
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                    <!-- Add your login form or content here -->
+                    <h2>Login</h2>
+                
+                    <div class="popup">
+            <form class="overl">
+                <div class="log">
+                    <input type="text" id="username" placeholder="Username/id/collegename">
+                </div>
+                <span id="usernameError" class="error"></span>
+                <div class="log">
+                    
+                        <input type="password" id="password" placeholder="Password">
+                        <i class="fa-regular fa-eye-slash" id="eyeSlash"></i>
+                    </div>
+                </div>
+                <span id="passwordError" class="error"></span>
+                <div class="log">
+                    <button type="button" id="loged"  class="btn btn-primary" style="float: right;" >Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+        </div>
+       <div id="successPopup" class="success-popup" style="display: none;">
+  <div class="popup-content">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="popupMessage">Success!</span>
+  </div>
+</div>
+
+  </div>
+
+    
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type='module' src="academics.js"></script>
+
+    <script type='module' src="login.js"></script>
+</body>
+</html>
