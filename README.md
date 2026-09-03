@@ -255,3 +255,8 @@ The application follows a client-server architecture.
                     │     AWS RDS         │
                     │   Database Hosting  │
                     └─────────────────────┘
+
+
+
+<img width="1663" height="833" alt="image" src="https://github.com/user-attachments/assets/056d0bf1-3989-4c13-8f80-ef4f46eadf0c" />
+
