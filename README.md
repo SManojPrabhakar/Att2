@@ -1,5 +1,5 @@
 # Attendance2Day – College Academic Management System
-
+Check out the live app ([https://play.google.com/store/apps](https://play.google.com/store/apps/details?id=com.attendance2day.att2&hl=en_IN).
 ### Every Day Counts: Attend to Achieve!
 
 Attendance2Day is a role-based College Academic Management System designed to
